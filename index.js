@@ -37,4 +37,22 @@ $(document).ready(function () {
         const filterValue = $(this).attr("data-filter");
         grid.isotope({ filter: filterValue });
     });
+
+    // new products owl carousel
+    $("#new-products .owl-carousel").owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 5,
+            },
+        },
+    });
 });
