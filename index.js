@@ -4,6 +4,8 @@ $(document).ready(function () {
         loop: true,
         dots: true,
         items: 1,
+        autoplay: true,
+        autoplayTimeout: 5000,
     });
 
     // top sale owl carousel
@@ -18,7 +20,7 @@ $(document).ready(function () {
             600: {
                 items: 3,
             },
-            100: {
+            1000: {
                 items: 5,
             },
         },
