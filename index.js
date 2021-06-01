@@ -5,7 +5,7 @@ $(document).ready(function () {
         dots: true,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 3000,
     });
 
     // top sale owl carousel
@@ -24,5 +24,17 @@ $(document).ready(function () {
                 items: 5,
             },
         },
+    });
+
+    // isotope filter
+    const grid = $(".grid").isotope({
+        itemSelector: ".grid-item",
+        layoutMode: "fitRows",
+    });
+
+    // filter items on button click
+    $(".button-group").on("click", "button", function () {
+        const filterValue = $(this).attr("data-filter");
+        grid.isotope({ filter: filterValue });
     });
 });
