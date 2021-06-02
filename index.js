@@ -15,9 +15,6 @@ $(document).ready(function () {
         dots: false,
         responsive: {
             0: {
-                items: 1,
-            },
-            600: {
                 items: 3,
             },
             1000: {
@@ -45,9 +42,6 @@ $(document).ready(function () {
         dots: true,
         responsive: {
             0: {
-                items: 1,
-            },
-            600: {
                 items: 3,
             },
             1000: {
@@ -74,9 +68,10 @@ $(document).ready(function () {
     // Product QTY
     let qtyUp = $(".qty-up");
     let qtyDown = $(".qty-down");
-    let input = $(".qty-input");
+    // let input = $(".qty-input");
 
     qtyUp.click(function (e) {
+        let input = $(`.qty-input[data-id='${$(this).data("id")}']`);
         if (input.val() >= 1 && input.val() <= 9) {
             input.val(function (i, oldVal) {
                 return ++oldVal;
@@ -85,7 +80,8 @@ $(document).ready(function () {
     });
 
     qtyDown.click(function (e) {
-        if (input.val() > 1 && input.val() <=10) {
+        let input = $(`.qty-input[data-id='${$(this).data("id")}']`);
+        if (input.val() > 1 && input.val() <= 10) {
             input.val(function (i, oldVal) {
                 return --oldVal;
             });
