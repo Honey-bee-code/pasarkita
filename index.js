@@ -70,4 +70,25 @@ $(document).ready(function () {
             },
         },
     });
+
+    // Product QTY
+    let qtyUp = $(".qty-up");
+    let qtyDown = $(".qty-down");
+    let input = $(".qty-input");
+
+    qtyUp.click(function (e) {
+        if (input.val() >= 1 && input.val() <= 9) {
+            input.val(function (i, oldVal) {
+                return ++oldVal;
+            });
+        }
+    });
+
+    qtyDown.click(function (e) {
+        if (input.val() > 1 && input.val() <=10) {
+            input.val(function (i, oldVal) {
+                return --oldVal;
+            });
+        }
+    });
 });

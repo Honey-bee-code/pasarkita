@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Raleway&family=Rubik&display=swap");
+* {
+    text-decoration: none !important;
+}
 /* Sass Template */
 /* global classes */
 button,
